@@ -18,6 +18,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
@@ -29,6 +31,10 @@
             font-family: 'DM Serif Display', serif;
         }
 
+        a {
+            font-style: none;
+            text-decoration: none;
+        }
 
         /* navigation starts */
 
@@ -49,6 +55,7 @@
         }
 
         nav .btn {
+            background-color: rgb(255, 255, 255);
             border-radius: 30px;
             padding: 8px 20px;
             letter-spacing: 2px;
@@ -60,58 +67,110 @@
         #mbl-show {
             display: none;
         }
-         /* This is scrolling add style */
+
+        /* This is scrolling add style */
         .nav-active {
             background-color: #fff;
-            box-shadow: 0px 5px 12px  rgb(0, 0, 0, 0.4);
+            box-shadow: 0px 5px 12px rgb(0, 0, 0, 0.4);
         }
 
         .fixed-top {
             transition: 0.2s ease-in-out;
         }
-        hr{
+
+        hr {
             position: sticky;
-            top:85px;
+            top: 85px;
             border: 1px solid rgb(0, 0, 0, 1) !important;
             z-index: 20;
         }
 
         /* end of nav */
 
-        
+
 
         /* bg */
 
         .home-page {
             background-color: black;
-            background: linear-gradient(to top, #00000023, #ffffff), url('images/bg.jpg') no-repeat top center;
+            background: linear-gradient(to top, #ffffff25, #ffffff), url('images/bg.jpg') no-repeat top center;
             background-size: cover;
             height: 100vh;
+            /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); */
         }
-       
+
         /*End of bg */
-         /* hero section */
-         .hero>h1 {
+        /* hero section */
+        .hero>h1 {
             font-size: 75px;
             text-align: center;
             letter-spacing: 8px;
-            padding-top: 15%;
+            padding-top: 13%;
+            height: 100%;
         }
-        .hero p{
+
+        .hero p {
             font-size: 30px;
             text-align: center;
             letter-spacing: 1.5px;
-            
+            overflow: hidden;
         }
+
         /* End of hero section */
 
+        /* menu section */
 
-        @media screen and (max-width:600px) {
+        /* .menu {
+            margin: auto 50px;
+        } */
+
+        .menu img {
+            max-width: 18rem;
+            border-radius: 50%;
+            height: 18rem;
+            margin-top:-100px;
+        }
+
+        .scrolling-wrapper {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            display: flex;
+            /* height: 550px; */
+            padding-top: 10%;
+          
+        }
+
+        .item {
+            min-width:290px ;
+            /* border: 2px solid rgba(182, 180, 180, 0); */
+            height: fit-content;
+            background: linear-gradient(0deg, rgba(203,203,203,1) 0%, rgba(255,255,255,1) 41%, rgba(255,255,255,1) 100%);
+            border-radius:20% 20% 40px 40px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        
+
+        .menu .btn {
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            padding: 8px 80px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            box-shadow: 0px 5px 5px 1px rgba(26, 26, 26, 0.3);
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* end of menu */
 
 
+        @media screen and (max-width:900px) {
 
             .item-bg-color {
-                background-color: rgba(255, 255, 255, 0.90);
+                background-color: rgb(255, 199, 80);
                 padding-bottom: 15px;
                 border-radius: 30px;
                 box-shadow: 0px 7px 8px 1px rgba(26, 26, 26, 0.5);
@@ -140,13 +199,36 @@
                 box-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
             }
 
+            .home-page {
+                min-height: fit-content;
+            }
+
+            .hero {
+                min-height: 100%;
+            }
+
             .hero>h1 {
                 margin: 0;
-                padding-top: 30%;
+                padding-top: 20%;
             }
-            .hero p{
-                padding-top: 20px;
+
+            .hero p {
+                padding-top: 10%;
+                /* padding-bottom: 10%; */
+
             }
+
+            #firstmenu {
+                margin-left: 10px !important;
+            }
+
+            .item {
+                margin-right: 30px;
+            }
+            .scrolling-wrapper{
+                padding-top:40%;
+            }
+
 
         }
     </style>
@@ -156,14 +238,14 @@
     <!-- bg section -->
     <div class="home-page">
         <!-- navigation bar -->
-        <nav class="navbar navbar-expand-md fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <a class="navbar-brand " href="#"><img src="images/logo.png" alt="LOGO" width="60px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span> <span class="material-symbols-outlined" style="color:rgb(0, 0, 0);font-weight:1000;">
-                            output_circle
+                    <span> <span class="material-symbols-outlined" style="color:rgb(0, 0, 0);font-weight:bolder;">
+                            lunch_dining
                         </span>
                     </span>
                 </button>
@@ -199,18 +281,71 @@
         <div class="hero">
             <h1>SUPER <span> <img src="images/souptext.svg" alt="SOUP" width="275px"
                         style="margin-bottom:3%;"></span>STALL</h1>
-                        <p class="container"> <i> Good Food doesn't need a Silver Fork </i></p>
+            <p class="container"> <i> Good Food doesn't need a Silver Fork </i> <br><br> <a href=""><i
+                        class="fa fa-instagram" style="font-size:40px;color: #000000;padding-right: 20px;"></i> </a> <a
+                    href=""><i class="fa fa-facebook" style="font-size:40px;color: #000000;padding-right: 20px;"></i>
+                </a> <a href=""><i class="fa fa-youtube-play"
+                        style="font-size:40px;color: #000000;padding-right: 20px;"></i> </a> </p>
         </div>
         <!-- End of hero section -->
 
     </div>
     <!-- end of bg section -->
+    <br>
+    <!-- Menu section start -->
+    <div class="menu">
 
-    venevenegrbr <br><br><br><br><br><br><br><br><br><br><br><br>
-    venegrgr
-    venegr
-    venegr
-    venegr
+        <h1 style="text-align: center;letter-spacing: 3px;">MENU</h1>
+
+
+        <div class="scrolling-wrapper">
+            
+            <div class="item" style="margin-left: 50px;" id="firstmenu">
+                <img src="images/chillibajji.jpg" alt="chillibajji">
+                <h4>Chilli bajji</h4>
+                <h4>Rs.5/-</h4>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/chillibajji.jpg" alt="chillibajji">
+                <h4>Chilli bajji</h4>
+                <h4>Rs.5/-</h4>
+                <button type="button" class="btn btn-light justify-content-end ">Developer</button>
+            </div>
+            <div class="item">
+                <img src="images/chillibajji.jpg" alt="chillibajji">
+                <h4>Chilli bajji</h4>
+                <h4>Rs.5/-</h4>
+                <button type="button" class="btn btn-light justify-content-end ">Developer</button>
+            </div>
+            <div class="item">
+                <img src="images/chillibajji.jpg" alt="chillibajji">
+                <h4>Chilli bajji</h4>
+                <h4>Rs.5/-</h4>
+                <button type="button" class="btn btn-light justify-content-end ">Developer</button>
+            </div>
+            <div class="item">
+                <img src="images/chillibajji.jpg" alt="chillibajji">
+                <h4>Chilli bajji</h4>
+                <h4>Rs.5/-</h4>
+                <button type="button" class="btn btn-light justify-content-end ">Developer</button>
+            </div>
+            <div class="item">
+                <img src="images/chillibajji.jpg" alt="chillibajji">
+                <h4>Chilli bajji</h4>
+                <h4>Rs.5/-</h4>
+                <button type="button" class="btn btn-light justify-content-end ">Developer</button>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- end of menu Section -->
 
 </body>
 
