@@ -22,7 +22,9 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-
+        html {
+  scroll-behavior: smooth;
+}
         * {
             margin: 0%;
             padding: 0%;
@@ -93,9 +95,10 @@
 
         .home-page {
             background-color: black;
-            background: linear-gradient(to top, #ffffff25, #ffffff), url('images/bg.jpg') no-repeat top center;
+            background: linear-gradient(to top, #ffffffa6, #ffffff), url('images/bg.jpg') no-repeat top center;
             background-size: cover;
-            height: 100vh;
+            max-height: 120vh;
+           min-height: 100vh;
             /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); */
         }
 
@@ -114,6 +117,7 @@
             text-align: center;
             letter-spacing: 1.5px;
             overflow: hidden;
+            padding: 5px;
         }
 
         /* End of hero section */
@@ -125,42 +129,55 @@
         } */
 
         .menu img {
-            max-width: 18rem;
+            max-width: 14rem;
             border-radius: 50%;
-            height: 18rem;
+            height: 14rem;
             margin-top:-100px;
+        }
+        .shade{
+            box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.3);
+        }
+        .menu h4,h5{
+            padding-top:20px ;
+            width: 100%;
         }
 
         .scrolling-wrapper {
             overflow-x: scroll;
-            overflow-y: hidden;
+            /* overflow-y: hidden; */
             white-space: nowrap;
             display: flex;
             /* height: 550px; */
             padding-top: 10%;
+            padding-bottom: 1%;
           
+        }
+        .scrolling-wrapper::-webkit-scrollbar{
+            display: none;
         }
 
         .item {
-            min-width:290px ;
+            min-width:230px ;
             /* border: 2px solid rgba(182, 180, 180, 0); */
             height: fit-content;
             background: linear-gradient(0deg, rgba(203,203,203,1) 0%, rgba(255,255,255,1) 41%, rgba(255,255,255,1) 100%);
             border-radius:20% 20% 40px 40px;
             margin-right: 50px;
             text-align: center;
+            /* border: 1px solid rgb(0, 0, 0) ; */
+            box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.5);
         }
         
 
         .menu .btn {
             background-color: rgb(255, 255, 255);
             border-radius: 30px;
-            padding: 8px 80px;
+            padding: 8px 30px;
             letter-spacing: 2px;
             text-align: center;
             text-transform: uppercase;
             box-shadow: 0px 5px 5px 1px rgba(26, 26, 26, 0.3);
-            margin-top: 30px;
+            /* margin-top:0px; */
             margin-bottom: 30px;
         }
 
@@ -200,7 +217,8 @@
             }
 
             .home-page {
-                min-height: fit-content;
+                min-height: 100vh;
+                /* max-height: 100vh; */
             }
 
             .hero {
@@ -227,6 +245,7 @@
             }
             .scrolling-wrapper{
                 padding-top:40%;
+                padding-bottom: 20px;
             }
 
 
@@ -296,56 +315,170 @@
     <div class="menu">
 
         <h1 style="text-align: center;letter-spacing: 3px;">MENU</h1>
-
-
-        <div class="scrolling-wrapper">
+        <span><b>&ensp;Veg</b><img src="images/vegsymbol.svg" alt="veg" width="40px" style="border-radius: 0;position: absolute;padding: 5px;"></span>
+        <button id="slideLeft" type="button">Slide left</button>
+        <button id="slideRight" type="button">Slide right</button>
+     <script>
+        const buttonRight = document.getElementById('slideRight');
+    const buttonLeft = document.getElementById('slideLeft');
+    buttonRight.onclick = function () {
+      document.getElementById('container').scrollLeft += 100;
+    };
+    buttonLeft.onclick = function () {
+      document.getElementById('container').scrollLeft -= 500;
+    };
+     </script>
+   
+        <!-- scrolling wrapper for veg -->
+        <div class="scrolling-wrapper" id="container">
             
             <div class="item" style="margin-left: 50px;" id="firstmenu">
-                <img src="images/chillibajji.jpg" alt="chillibajji">
-                <h4>Chilli bajji</h4>
+                <img src="images/califlower.jpg" alt="califlower 65" class="shade">
+                <h4>Gobi 65 </h4>
+                <h4>Rs.40/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item" style="margin-left: 50px;" id="firstmenu">
+                <img src="images/vadai.jpg" alt="vadai" class="shade">
+                <h4>Vadai </h4>
                 <h4>Rs.5/-</h4>
+                <p>(100grams)</p>
                 <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
             </div>
             <div class="item">
-                <img src="images/chillibajji.jpg" alt="chillibajji">
-                <h4>Chilli bajji</h4>
+                <img src="images/bajjibana.jpg" alt="bajjibana" class="shade">
+                <h4>Banana bajji</h4>
                 <h4>Rs.5/-</h4>
-                <button type="button" class="btn btn-light justify-content-end ">Developer</button>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
             </div>
             <div class="item">
-                <img src="images/chillibajji.jpg" alt="chillibajji">
-                <h4>Chilli bajji</h4>
+                <img src="images/onionbajji.jpg" alt="onionbajji" class="shade">
+                <h4>Onion bajji</h4>
                 <h4>Rs.5/-</h4>
-                <button type="button" class="btn btn-light justify-content-end ">Developer</button>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end">ORDER NOW</button>
             </div>
             <div class="item">
-                <img src="images/chillibajji.jpg" alt="chillibajji">
-                <h4>Chilli bajji</h4>
+                <img src="images/potatobajji.jpg" alt="potatobajji" class="shade">
+                <h4>Potato bajji</h4>
                 <h4>Rs.5/-</h4>
-                <button type="button" class="btn btn-light justify-content-end ">Developer</button>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
             </div>
             <div class="item">
-                <img src="images/chillibajji.jpg" alt="chillibajji">
+                <img src="images/chillibajji.jpg" alt="chillibajji" class="shade">
                 <h4>Chilli bajji</h4>
                 <h4>Rs.5/-</h4>
-                <button type="button" class="btn btn-light justify-content-end ">Developer</button>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
             </div>
             <div class="item">
-                <img src="images/chillibajji.jpg" alt="chillibajji">
-                <h4>Chilli bajji</h4>
+                <img src="images/vegsoup.jpeg" alt="vegsoup" class="shade">
+                <h4>Veg Soup</h4>
+                <h4>Rs.25/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/chanamasala.jpg" alt="chanamasala" class="shade">
+                <h4>Chana Masala</h4>
+                <h4>Rs.15/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/chickpea.jpg" alt="chickpea" class="shade">
+                <h4>ChickPea Sundal</h4>
+                <h4>Rs.15/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            
+            <br><br>
+        </div>
+         <!-- end of veg wrapper -->
+
+<br><br>
+<!-- scrolling wrapper for nonveg -->
+<span><b>&ensp;Non-Veg</b><img src="images/nonvegsymbol.svg" alt="non-veg" width="40px" style="border-radius: 0;position: absolute;padding: 5px;box-shadow: 0;"></span>
+
+<div class="scrolling-wrapper">
+            
+            <div class="item" style="margin-left: 50px;" id="firstmenu">
+                <img src="images/chicken-65.jpg" alt="chicken-65" class="shade">
+                <h4>chicken-65</h4>
+                <h4>Rs.50/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/feetfry.jpg" alt="feetfry" class="shade">
+                <h4>Chicken Feet Fry</h4>
                 <h4>Rs.5/-</h4>
-                <button type="button" class="btn btn-light justify-content-end ">Developer</button>
+                <p>(100grams)</p>               
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/Chicken-Pakora.jpg" alt="Chicken-Pakora" class="shade">
+                <h4>Chicken-Pakora</h4>
+                <h4>Rs.40/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/chisoup.png" alt="chicken Soup" class="shade">
+                <h4>Chicken Soup</h4>
+                <h4>Rs.25/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/muttonsoup.jpg" alt="muttonsoup" class="shade">
+                <h4>Mutton Soup</h4>
+                <h4>Rs.25/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/kaalpaya.jpg" alt="Kaalpaya" class="shade">
+                <h4>Aatukal Paya</h4>
+                <h4>Rs.60/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/fishfry.jpg" alt="fishfry" class="shade">
+                <h4>Fish Fry</h4>
+                <h4>Rs.25/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/egg.jpg" alt="boiled egg" class="shade">
+                <h4>Boiled Egg</h4>
+                <h4>Rs.10/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/eggbonda.jpg" alt="eggbonda" class="shade">
+                <h4>Egg Bonda</h4>
+                <h4>Rs.7/-</h4>
+                <p>(100grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
             </div>
             
         </div>
-
+        
+         <!-- end of noneg wrapper -->
 
     </div>
-
-
-
-
     <!-- end of menu Section -->
+
+
+
 
 </body>
 
