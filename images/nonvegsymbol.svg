@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="155mm"
+   height="146mm"
+   viewBox="0 0 155 146"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="vegsymbol.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient5379"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#3d7100;stop-opacity:1;"
+         offset="0"
+         id="stop5377" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3340"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#3d7100;stop-opacity:1;"
+         offset="0"
+         id="stop3338" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#550000;stroke-width:19.004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.3;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect5628"
+       width="135.99638"
+       height="126.99638"
+       x="9.5018082"
+       y="9.5018082" />
+    <circle
+       style="fill:#550000;fill-opacity:1;stroke:none;stroke-width:19.004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.3;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path5736"
+       cx="77.5"
+       cy="73"
+       r="40.848225" />
+  </g>
+</svg>

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Soup Stall</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            color: black;
+            font-family: 'DM Serif Display', serif;
+        }
+
+        a {
+            font-style: none;
+            text-decoration: none;
+        }
+
+        /* navigation starts */
+
+        nav {
+            /* position: sticky !important; */
+            /* font-weight: bold; */
+            letter-spacing: 3px;
+            /* display: flex!important;
+            justify-content: space-between !important; */
+        }
+
+        nav ul li a {
+            /* background-color: aquamarine; */
+            padding-right: 30px !important;
+            text-transform: uppercase;
+            color: rgb(0, 0, 0) !important;
+
+        }
+
+        nav .btn {
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            padding: 8px 20px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            box-shadow: 0px 5px 5px 1px rgba(26, 26, 26, 0.3);
+        }
+
+        #mbl-show {
+            display: none;
+        }
+
+        /* This is scrolling add style */
+        .nav-active {
+            background-color: #ffffff;
+            box-shadow: 0px 5px 12px rgb(0, 0, 0, 0.4);
+        }
+
+        .fixed-top {
+            transition: 0.2s ease-in-out;
+        }
+
+        hr {
+            position: sticky;
+            top: 85px;
+            border: 1px solid rgb(0, 0, 0, 1) !important;
+            z-index: 20;
+        }
+
+        /* end of nav */
+
+
+
+        /* bg */
+
+        .home-page {
+            background-color: black;
+            background: linear-gradient(to top, #c9c8c8b0, #ffffff), url('images/bg.jpg') no-repeat top center;
+            background-size: cover;
+            max-height: 140vh;
+            min-height: 100vh;
+            /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); */
+        }
+
+        /*End of bg */
+        /* hero section */
+        .hero>h1 {
+            font-size: 75px;
+            text-align: center;
+            letter-spacing: 8px;
+            padding-top: 13%;
+            height: 100%;
+        }
+
+        .hero p {
+            font-size: 30px;
+            text-align: center;
+            letter-spacing: 1.5px;
+            overflow: hidden;
+            padding: 5px;
+        }
+
+        /* End of hero section */
+
+        /* menu section */
+
+        /* .menu {
+            margin: auto 50px;
+        } */
+
+        .menu img {
+            max-width: 14rem;
+            border-radius: 50%;
+            height: 14rem;
+            margin-top: -100px;
+        }
+
+        .shade {
+            box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu h4,
+        h5 {
+            padding-top: 20px;
+            width: 100%;
+        }
+
+        .menu h4 {
+            color: #2b2b2b !important;
+        }
+
+        .scrolling-wrapper {
+            overflow-x: scroll;
+            /* overflow-y: hidden; */
+            white-space: nowrap;
+            display: flex;
+            /* height: 550px; */
+            padding-top: 10%;
+            padding-bottom: 1%;
+
+        }
+
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item {
+            min-width: 230px;
+            /* border: 2px solid rgba(182, 180, 180, 0); */
+            height: fit-content;
+            background: linear-gradient(0deg, rgba(203, 203, 203, 1) 0%, rgba(255, 255, 255, 1) 41%, rgba(255, 255, 255, 1) 100%);
+            border-radius: 20% 20% 40px 40px;
+            margin-right: 50px;
+            text-align: center;
+            /* border: 1px solid rgb(0, 0, 0) ; */
+            box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .menu .btn {
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            padding: 8px 30px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            box-shadow: 0px 5px 5px 1px rgba(26, 26, 26, 0.3);
+            /* margin-top:0px; */
+            margin-bottom: 30px;
+        }
+
+        .scroll-menu-btn {
+            position: absolute;
+            margin-top: 10%;
+            border-radius: 50%;
+            background-color: transparent;
+            font-weight: bold;
+            text-align: center;
+            opacity: 1;
+            color: #4d4d4d;
+            outline: none;
+            border: 0;
+        }
+
+        #slideRightveg {
+            right: 5px;
+        }
+
+        #slideLeftveg {
+            left: 5px;
+        }
+
+        #slideLeftn {
+            left: 5px;
+        }
+
+        #slideRightn {
+            right: 5px;
+        }
+
+        /* end of menu */
+
+        /* Special page begin */
+        .carousel {
+            max-height: fit-content;
+            margin: auto 120px auto 120px;
+            align-items: center;
+        }
+
+
+        /* End of special page */
+
+        /* review page */
+
+        .col-md {
+            padding: 20px;
+            display: flex;
+            /* align-items: center;
+            justify-content: center; */
+        }
+
+        .row {
+            padding-top: 10px;
+        }
+
+        .col-md ul li {
+            font-size: 30px;
+            list-style-type: none;
+        }
+
+        /* endof review page */
+        /* CONRACT PAGE BEGINS  */
+        .contact {
+            min-width: 100px;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        .exp-contact {
+            padding: 0;
+        }
+
+        /* .exp-contact .col-md{
+            padding: 0;
+            margin: 0;
+        } */
+        .exp-contact ul li a,
+        h3 {
+            color: #ffffff;
+            font-size: 20px !important;
+            padding: 10px;
+            letter-spacing: 3px;
+            margin-left: -20px;
+            word-break: break-all;
+        }
+
+        /* end of contact page */
+
+
+
+
+        @media screen and (max-width:1000px) {
+
+            .item-bg-color {
+                background-color: rgb(233, 233, 233);
+                padding-bottom: 15px;
+                border-radius: 30px;
+                box-shadow: 0px 7px 8px 1px rgba(26, 26, 26, 0.5);
+            }
+
+            nav ul li a {
+                text-align: center;
+            }
+
+            #mbl-hidden {
+                display: none;
+            }
+
+            #mbl-show {
+                display: inline-block;
+                margin-left: 25%;
+                border: 0.5px solid rgb(0, 0, 0);
+            }
+
+            .navbar-toggler {
+                border: 0;
+            }
+
+            .navbar-toggler:focus {
+                outline: none;
+                box-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+            }
+
+            .home-page {
+                min-height: 100vh;
+                /* max-height: 100vh; */
+            }
+
+            .hero {
+                min-height: 100%;
+            }
+
+            .hero>h1 {
+                margin: 0;
+                padding-top: 20%;
+            }
+
+            .hero p {
+                padding-top: 10%;
+                /* padding-bottom: 10%; */
+
+            }
+
+            #firstmenu {
+                margin-left: 10px !important;
+            }
+
+            .item {
+                margin-right: 30px;
+            }
+
+            .scrolling-wrapper {
+                padding-top: 40%;
+                padding-bottom: 20px;
+            }
+
+            .scroll-menu-btn {
+                margin-top: 35%;
+            }
+
+            .carousel {
+                max-height: 80vh;
+                margin: auto 10px auto 10px;
+            }
+
+            .carousel img {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- bg section -->
+    <div class="home-page">
+        <!-- navigation bar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand " href="#"><img src="images/logo.png" alt="LOGO" width="60px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span> <span class="material-symbols-outlined" style="color:rgb(0, 0, 0);font-weight:bolder;">
+                            lunch_dining
+                        </span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center item-bg-color" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item ">
+                            <a class="nav-link " aria-current="page" href="#hero">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#special">Special</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reviews">reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+
+                    </ul>
+                    <button type="button" class="btn btn-light nav-item" id="mbl-show"
+                        onclick="location.href='https://www.linkedin.com/in/stephenraj-w-3594031aa/'">Developer</button>
+                </div>
+                <button type="button" class="btn btn-light justify-content-end " id="mbl-hidden"
+                    onclick="location.href='https://www.linkedin.com/in/stephenraj-w-3594031aa/'">Developer</button>
+            </div>
+        </nav>
+        <div id="hero"></div>
+        <hr class="container">
+
+        <!-- end of navigation bar -->
+
+        <!-- Hero section -->
+        <div class="hero">
+            <h1>SUPER <span> <img src="images/souptext.svg" alt="SOUP" width="275px"
+                        style="margin-bottom:3%;"></span>STALL</h1>
+            <p class="container"> <i> Good Food doesn't need a Silver Fork </i> <br><br> <a href=""><i
+                        class="fa fa-instagram" style="font-size:40px;color: #000000;padding-right: 20px;"></i> </a>
+                <a><i class="fa fa-facebook" style="font-size:40px;color: #7a7a7a;padding-right: 20px;"></i>
+                </a> <a><i class="fa fa-youtube-play" style="font-size:40px;color: #7a7a7a;padding-right: 20px; "></i>
+                </a>
+            </p>
+        </div>
+        <!-- End of hero section -->
+
+    </div>
+    <!-- end of bg section -->
+    <div id="menu"></div>
+    <br>
+
+    <!-- Menu section start -->
+    <div class="menu">
+
+        <h1 style="text-align: center;letter-spacing: 3px;">MENU</h1>
+        <span><b>&ensp;Veg</b><img src="images/vegsymbol.svg" alt="veg" width="40px"
+                style="border-radius: 0;position: absolute;padding: 5px;"></span>
+
+
+        <!-- scrolling wrapper for veg -->
+        <div class="scrolling-wrapper " id="vegwrapper">
+            <button id="slideLeftveg" type="button" class="scroll-menu-btn"><i class="fa fa-arrow-circle-left"
+                    style="font-size:40px;color:rgb(156, 156, 156)"></i></button>
+            <button id="slideRightveg" type="button" class="scroll-menu-btn"><i class="fa fa-arrow-circle-right"
+                    style="font-size:40px;color:rgb(156, 156, 156);opacity: 1!important;"></i></button>
+
+            <div class="item" style="margin-left: 50px;" id="firstmenu">
+                <img src="images/chicken-65.jpg" alt="chicken-65" class="shade">
+                <h4>gobi-65</h4>
+                <h4>Rs.40/-</h4>
+                <p>(100 Grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item" id="firstmenu">
+                <img src="images/vadai.jpg" alt="vadai" class="shade">
+                <h4>Vadai </h4>
+                <h4>Rs.5/-</h4>
+                <p>(1 Piece)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/bajjibana.jpg" alt="bajjibana" class="shade">
+                <h4>Banana bajji</h4>
+                <h4>Rs.5/-</h4>
+                <p>(1 Piece)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/onionbajji.jpg" alt="onionbajji" class="shade">
+                <h4>Onion bajji</h4>
+                <h4>Rs.5/-</h4>
+                <p>(1 Piece)</p>
+                <button type="button" class="btn btn-light justify-content-end">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/potatobajji.jpg" alt="potatobajji" class="shade">
+                <h4>Potato bajji</h4>
+                <h4>Rs.5/-</h4>
+                <p>(1 Piece)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/chillibajji.jpg" alt="chillibajji" class="shade">
+                <h4>Chilli bajji</h4>
+                <h4>Rs.5/-</h4>
+                <p>(1 Piece)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/vegsoup.jpeg" alt="vegsoup" class="shade">
+                <h4>Veg Soup</h4>
+                <h4>Rs.20/-</h4>
+                <p>(1 Bowl)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/chanamasala.jpg" alt="chanamasala" class="shade">
+                <h4>Chana Masala</h4>
+                <h4>Rs.10/-</h4>
+                <p>(1 Bowl)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/chickpea.jpg" alt="chickpea" class="shade">
+                <h4>ChickPea Sundal</h4>
+                <h4>Rs.15/-</h4>
+                <p>(1 Bowl)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+
+            <br><br>
+        </div>
+        <!-- end of veg wrapper -->
+
+        <br><br>
+        <!-- scrolling wrapper for nonveg -->
+        <span><b>&ensp;Non-Veg</b><img src="images/nonvegsymbol.svg" alt="non-veg" width="40px"
+                style="border-radius: 0;position: absolute;padding: 5px;box-shadow: 0;"></span>
+
+        <div class="scrolling-wrapper " id="nonwrapper">
+
+            <button id="slideLeftn" type="button" class="scroll-menu-btn"><i class="fa fa-arrow-circle-left"
+                    style="font-size:40px;color:rgb(156, 156, 156)"></i></button>
+            <button id="slideRightn" type="button" class="scroll-menu-btn"><i class="fa fa-arrow-circle-right"
+                    style="font-size:40px;color:rgb(156, 156, 156)"></i></button>
+
+            <div class="item" style="margin-left: 50px;" id="firstmenu">
+                <img src="images/califlower.jpg" alt="chicken-65" class="shade">
+                <h4>Chicken-65</h4>
+                <h4>Rs.50/-</h4>
+                <p>(100-grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/feetfry.jpg" alt="feetfry" class="shade">
+                <h4>Chicken Feet Fry</h4>
+                <h4>Rs.10/-</h4>
+                <p>(3-pieces)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/Chicken-Pakora.jpg" alt="Chicken-Pakora" class="shade">
+                <h4>Chicken-Pakora</h4>
+                <h4>Rs.40/-</h4>
+                <p>(100-grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/chisoup.png" alt="chicken Soup" class="shade">
+                <h4>Chicken Soup</h4>
+                <h4>Rs.20/-</h4>
+                <p>(1-Bowl)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/muttonsoup.jpg" alt="muttonsoup" class="shade">
+                <h4>Mutton Soup</h4>
+                <h4>Rs.25/-</h4>
+                <p>(100-grams)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/kaalpaya.jpg" alt="Kaalpaya" class="shade">
+                <h4>Aatukal Paya</h4>
+                <h4>Rs.60/-</h4>
+                <p>(1 leg with 1 Bowl)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/fishfry.jpg" alt="fishfry" class="shade">
+                <h4>Fish Fry</h4>
+                <h4>Rs.25/-</h4>
+                <p>(1 piece)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/egg.jpg" alt="boiled egg" class="shade">
+                <h4>Boiled Egg</h4>
+                <h4>Rs.10/-</h4>
+                <p>(1 egg)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+            <div class="item">
+                <img src="images/eggbonda.jpg" alt="eggbonda" class="shade">
+                <h4>Egg Bonda</h4>
+                <h4>Rs.7/-</h4>
+                <p>(1-piece)</p>
+                <button type="button" class="btn btn-light justify-content-end ">ORDER NOW</button>
+            </div>
+
+        </div>
+        <br><br>
+        <!-- end of noneg wrapper -->
+
+    </div>
+    <!-- end of menu Section -->
+    <div id="special"></div>
+    <!-- Special page begins -->
+    <div class="special">
+        <h1 style="text-align: center;letter-spacing: 3px;">SPECIAL</h1>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="images/1.jpg" class="w-100" alt="Slider1">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="images/2.jpg" class=" w-100" alt="Slide2">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="images/3.jpg" class=" w-100" alt="Slide3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <!-- end of special page -->
+
+    <!-- review page begins -->
+    <div id="reviews"></div>
+    <div class="review">
+        <h1 style="text-align: center;letter-spacing: 3px;">REVIEW</h1>
+        <div class="container">
+            <!-- row1 -->
+            <div class="row">
+                <div class="col-md">
+                    <i class="material-icons" style="font-size:98px;color:rgb(0, 0, 0)">person</i>
+                    <div class="name-rate">
+                        <ul>
+                            <li> Stephenraj </li>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(185, 185, 185)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(185, 185, 185)"></i>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <i class="material-icons" style="font-size:98px;color:rgb(0, 0, 0)">person</i>
+                    <div class="name-rate">
+                        <ul>
+                            <li> Sambath Kumar </li>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(185, 185, 185)"></i>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- row2 -->
+            <div class="row">
+                <div class="col-md">
+                    <i class="material-icons" style="font-size:98px;color:rgb(0, 0, 0)">person</i>
+                    <div class="name-rate">
+                        <ul>
+                            <li> Anjelin Sneka</li>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <i class="material-icons" style="font-size:98px;color:rgb(0, 0, 0)">person</i>
+                    <div class="name-rate">
+                        <ul>
+                            <li> Reegan Rajasekar</li>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(255, 153, 1)"></i>
+                            <i class="fa fa-star" style="font-size:30px;color:rgb(185, 185, 185)"></i>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- review page end -->
+    <br><br>
+
+    <!-- Contact page begins -->
+    <div id="contact"></div>
+    <div class="contact container">
+        <h1 style="text-align: center;letter-spacing: 3px;">CONTACT</h1>
+
+        <div class="row">
+            <div class="col-md" style="height: 400px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d202.8715664624876!2d79.14035546697122!3d10.762835987313236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1676052306619!5m2!1sen!2sin"
+                    width="100%" style="padding: 0 !important;margin: 0 !important;background-color: #000000;"></iframe>
+            </div>
+            <div class="col-md container"
+                style="text-align: center;display: flex;align-items: center;justify-content: center; background-color: rgba(255, 255, 255, 0.808);margin-top: 18px;margin-bottom: 17px;margin-right:10px;box-shadow: 2px 3px 4px rgba(173, 173, 173, 0.589);">
+                <h6 style="font-size: 30px;line-height: 50px;word-spacing: 5px;"> No.1, Chitra Nagar, <br>N.K.Road,
+                    Thanjavur <br> 613006.</h6>
+            </div>
+        </div>
+
+        <div class="row exp-contact" style="background-color: #000000;">
+            <div class="col-md">
+                <ul>
+                    <h3>CONTACT</h3>
+                    <li><a href="https://wa.me/+91 6385712059?text=Hi Steven"> <i class="fa fa-whatsapp"
+                                style="font-size:25px;color: #ffffff;"></i> 6385712059</a></li>
+                    <li><a href="tel:6385712059"><i class="fa fa-phone" style="font-size:25px;color: #ffffff;"></i> +91
+                            6385712059 </a></li>
+                    <li><a href="mailto: stephenrajprime@gmail.com"><i class="fa fa-envelope"
+                                style="font-size:25px;color: #ffffff;"></i> stephenrajprime@gmail.com </a></li>
+                </ul>
+            </div>
+
+            <div class="col-md">
+
+                <ul>
+                    <h3>FOLLOW</h3>
+                    <li> <a href="https://www.instagram.com/"><i class="fa fa-instagram"
+                                style="font-size:25px;color: #ffffff;"></i> stevennprime</a></li>
+                    <li> <a href="https://www.linkedin.com/in/stephenrajw/"><i class="fa fa-github"
+                                style="font-size:25px;color: #ffffff;"></i> Stephenraj W</a></li>
+                    <li><a href="https://github.com/StephenrajW"><i class="fa fa-linkedin"
+                                style="font-size:25px;color: #ffffff;"></i> StephenrajW</a></li>
+                    <li><a href="https://dribbble.com/stevenprime"><i class="fa fa-dribbble"
+                                style="font-size:25px;color: #ffffff;"></i> stevenprime</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md" style="display:flex;align-items: center;justify-content: center;">
+                <img src="images/logo.png" alt="logo" width="200px">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Contact page end -->
+    <div class="footer" style="background-color: #b8b8b8;margin-bottom: -10px !important;">
+        <h5 style="text-align: center;letter-spacing: 3px;font-size: 15px;padding: 20px;color: #000000;">Design and
+            Developed by Stephenraj</h5>
+    </div>
+
+    <a href="#hero" id="myBtn" style="display: none;text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    background-color: rgba(245, 245, 245, 0);
+    color: rgb(0, 0, 0);
+    cursor: pointer;"><i class="fa fa-arrow-circle-up"
+                    style="font-size:30px;color:rgb(255, 7, 7)"></i></a>
+
+</body>
+
+</html>
+<script>
+    let mybutton = document.getElementById("myBtn");
+    const navbar = document.querySelector('.fixed-top');
+    window.onscroll = () => {
+        if (window.scrollY > 20) {
+            navbar.classList.add('nav-active');
+
+        } else {
+            navbar.classList.remove('nav-active');
+        }
+
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+
+    };
+
+
+
+    const buttonRightveg = document.getElementById('slideRightveg');
+    const buttonLeftveg = document.getElementById('slideLeftveg');
+
+    buttonRightveg.onclick = function () {
+        document.getElementById('vegwrapper').scrollBy({ top: 0, left: 300, behavior: 'smooth' });
+        clearInterval(veg)
+    };
+
+
+    buttonLeftveg.onclick = function () {
+        document.getElementById('vegwrapper').scrollBy({ top: 0, left: -300, behavior: 'smooth' });
+        clearInterval(veg)
+    };
+
+
+   var veg= setInterval(fun,2000);
+    function fun(){
+        document.getElementById('vegwrapper').scrollBy({ top: 0, left: 100, behavior: 'smooth' });
+        if (document.getElementById('vegwrapper').scrollLeft > 1000) {
+            document.getElementById('vegwrapper').scrollBy({ top: 0, left: -1800, behavior: 'smooth' });
+        }
+    }
+
+    const buttonRightn = document.getElementById('slideRightn');
+    const buttonLeftn = document.getElementById('slideLeftn');
+
+    buttonRightn.onclick = function () {
+        document.getElementById('nonwrapper').scrollBy({ top: 0, left: 300, behavior: 'smooth' });
+        clearInterval(nveg)
+    };
+    buttonLeftn.onclick = function () {
+        document.getElementById('nonwrapper').scrollBy({ top: 0, left: -300, behavior: 'smooth' });
+        clearInterval(nveg)
+    };
+
+    var nveg= setInterval(funnon,2000);
+    function funnon(){
+        document.getElementById('nonwrapper').scrollBy({ top: 0, left: 150, behavior: 'smooth' });
+        if (document.getElementById('nonwrapper').scrollLeft > 1000) {
+            document.getElementById('nonwrapper').scrollBy({ top: 0, left: -1800, behavior: 'smooth' });
+        }
+    }
+    // top button
+
+   
+
+</script>
